@@ -1,25 +1,20 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    char ch;
-    printf("input: ");
-    scanf(" %c", &ch);
+     int i,j,n;
+    printf("n= ");
+    scanf("%d", &n);
 
-    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+    for(i=1; i<=n; i++)
     {
-        printf("%c is an alphabet.\n", ch);
+        for(j=1; j<=n-i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
     }
-
-    else if (ch >= '0' && ch <= '9')
-    {
-        printf("%c is a digit.\n", ch);
-    }
-
-    else
-    {
-        printf("%c is a special character.\n", ch);
-    }
-
-    return 0;
 }
-

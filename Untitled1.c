@@ -1,20 +1,17 @@
-#include <stdio.h>
-
-int main() {
-    int n;
-
-    printf("Enter a number: ");
+#include<stdio.h>
+int main()
+{
+    int i,j,n;
+    printf("n= ");
     scanf("%d", &n);
 
-    printf("Factors of %d are: ", n);
-
-    for (int i = 1; i <= n; i++) {
-        if (n % i == 0) {
-            printf("%d, ", i);
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=i; j++)
+        {
+            printf("%d ",j);
         }
+
+        printf("\n");
     }
-
-    printf("\n");
-
-    return 0;
 }
